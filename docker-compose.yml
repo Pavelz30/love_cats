@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    volumes:
+      - /tmp/:/tmp/
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+    volumes:
+      - /tmp/:/tmp/ 
+
+  nginx:
+    build:
+      context: ./nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - /tmp/:/tmp 
+    depends_on:
+      - frontend
+      - backend
+
