@@ -18,4 +18,5 @@ Plan:
 - Profit
 
 ====
-run: docker compose up --build 
+
+run: docker compose up --build Don't forget to stop the local nginx.
