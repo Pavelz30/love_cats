@@ -19,4 +19,5 @@ Plan:
 
 ====
 
-run: docker compose up --build Don't forget to stop the local nginx.
+run: docker compose up --build 
+Don't forget to stop the local nginx :)
