@@ -16,3 +16,8 @@ Plan:
 - we will give cats to users
 - ...
 - Profit
+
+====
+
+This version without sockets, its use ports.
+run: docker compose up --build. Don't forget to stop the local nginx :)
